@@ -1,0 +1,17 @@
+<h1>Yes!</h1>
+
+<div class="container">
+	<div class="row col-md-6  col-md-offset-3">
+
+
+	<p id="notice"><%= notice %></p>
+
+	  <div class="commentsvideo">
+	    <%= raw youtube_comments(@video.url) %>
+	    <%= raw @video.UserId %>
+	  </div>
+
+	<%= link_to 'Edit', edit_video_path(@video) %> |
+	<%= link_to 'Back', videos_path %>
+  </div>
+</div>	

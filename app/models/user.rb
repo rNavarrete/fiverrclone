@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   gravtastic
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :videos
 end

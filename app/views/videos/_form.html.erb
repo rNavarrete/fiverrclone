@@ -1,0 +1,14 @@
+<div class="row">
+    <em><h2 class="lead"><legend>Upload a Video.</legend></h2></em>
+    <%= simple_form_for(@videos, html: {class: 'form-horizontal' }) do |f| %>
+    <%= f.input  :url, placeholder: 'Paste a youtube video link here.'%>
+    <%= f.input  :description, as: :text, input_html: { maxlength: 20 } %>
+    <%= f.input :UserId, :as => :hidden, :input_html =>{ :value => current_user.id} %>
+
+
+   <div class="offset2">
+     <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+    </div>  
+  </div>          
+</div>
